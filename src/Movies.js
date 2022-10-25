@@ -60,24 +60,22 @@ export default function Movies() {
             </div>
           </div>
         </form>
-        <Results title={results.title} released={results.released} />
+        <Results title={results.title} year={results.year} />
       </div>
     );
   } else {
     handleMovieData();
     return (
       <div className="Loading text-center">
-        <div className="Loader-spinner text-center">
-          <Bars
-            height="80"
-            width="80"
-            color="#4fa94d"
-            ariaLabel="bars-loading"
-            wrapperStyle={{}}
-            wrapperClass=""
-            visible={true}
-          />
-        </div>
+        <Bars
+          height="50"
+          width="50"
+          color="#4fa94d"
+          ariaLabel="bars-loading"
+          wrapperStyle={{}}
+          wrapperClass=""
+          visible={true}
+        />
       </div>
     );
   }
