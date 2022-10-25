@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
-// import Results from "./Results";
+import { Bars } from "react-loader-spinner";
+import Results from "./Results";
 import "./Movies.css";
 
 export default function Movies() {
@@ -9,8 +10,14 @@ export default function Movies() {
   let [results, setResults] = useState("");
 
   function handleMovieResponse(response) {
-    // console.log(response.data);
-    setResults(response.data.title);
+    setResults({
+      title: response.data.Title,
+      year: response.data.Year,
+      plot: response.data.Plot,
+      poster: response.data.Poster,
+      runTime: response.data.Runtime,
+      actors: response.data.Actors,
+    });
     setLoaded(true);
   }
 
@@ -53,11 +60,25 @@ export default function Movies() {
             </div>
           </div>
         </form>
-        <h1>{results}</h1>
+        <Results title={results.title} released={results.released} />
       </div>
     );
   } else {
     handleMovieData();
-    return <div>Loading...</div>;
+    return (
+      <div className="Loading text-center">
+        <div className="Loader-spinner text-center">
+          <Bars
+            height="80"
+            width="80"
+            color="#4fa94d"
+            ariaLabel="bars-loading"
+            wrapperStyle={{}}
+            wrapperClass=""
+            visible={true}
+          />
+        </div>
+      </div>
+    );
   }
 }
