@@ -1,10 +1,11 @@
 .Movies {
-  padding: 10px 10px;
+  padding: 20px 20px;
+  margin: 20px 20px;
 }
 
 .Movies .search-bar {
   border-radius: 10px;
-  border: 1px solid black;
+  border: 1px solid gray;
   padding: 10px 10px;
   width: 100%;
 }
@@ -13,7 +14,7 @@
   margin: 0;
   padding: 10px 10px;
   border-radius: 10px;
-  color: black;
+  color: gray;
   width: 100%;
-  border: 1px solid black;
+  border: 1px solid gray;
 }

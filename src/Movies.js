@@ -16,10 +16,13 @@ export default function Movies() {
       title: response.data.Title,
       year: response.data.Year,
       runTime: response.data.Runtime,
+      rated: response.data.Rated,
       genre: response.data.Genre,
       poster: response.data.Poster,
       plot: response.data.Plot,
+      director: response.data.Director,
       actors: response.data.Actors,
+      rating: response.data.imdbRating,
     });
     setLoaded(true);
   }
@@ -70,6 +73,10 @@ export default function Movies() {
           runTime={results.runTime}
           genre={results.genre}
           plot={results.plot}
+          actors={results.actors}
+          rating={results.rating}
+          rated={results.rated}
+          director={results.director}
         />
       </div>
     );
