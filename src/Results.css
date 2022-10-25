@@ -1,0 +1,41 @@
+.Results {
+  padding: 30px 10px;
+  margin: 10px 10px;
+}
+
+.Results h1 {
+  text-align: left;
+}
+
+.Results ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  text-align: left;
+  padding: 0;
+}
+
+.Results .run-time {
+  margin-left: 10px;
+}
+
+.Results img {
+  margin-top: 10px;
+  display: flex;
+  justify-content: left;
+}
+
+.Results .genre {
+  text-align: left;
+  margin-top: 10px;
+  border: 1px solid gray;
+  border-radius: 18px;
+  padding: 8px 10px;
+  width: 40%;
+}
+
+.Results .plot {
+  display: flex;
+  text-align: left;
+  margin-top: 20px;
+}

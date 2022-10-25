@@ -1,7 +1,19 @@
+.Movies {
+  padding: 10px 10px;
+}
+
+.Movies .search-bar {
+  border-radius: 10px;
+  border: 1px solid black;
+  padding: 10px 10px;
+  width: 100%;
+}
+
 .Movies .btn-branding {
   margin: 0;
-  padding-right: 30px;
-  padding-left: 30px;
-
+  padding: 10px 10px;
+  border-radius: 10px;
+  color: black;
+  width: 100%;
   border: 1px solid black;
 }
